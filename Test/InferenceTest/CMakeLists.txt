@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.13)
+project(inferenceTest VERSION 1.0.0)
+set(CMAKE_BUILD_TYPE "release")
+add_subdirectory(./ZcTest inferenceTest)
+add_subdirectory(./../../Algorithm/inference  inference)
