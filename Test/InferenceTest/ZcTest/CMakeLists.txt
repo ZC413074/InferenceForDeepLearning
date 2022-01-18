@@ -21,15 +21,15 @@ endif()
 FILE(GLOB_RECURSE SOURCES *.cpp *.c *.h *.hpp *.cu)
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${SOURCES})
 target_sources(${PROJECT_NAME} PRIVATE ${SOURCES})
-target_link_libraries(${PROJECT_NAME} PRIVATE Inference)
+target_link_libraries(${PROJECT_NAME} PRIVATE MyAlgorithm)
 target_include_directories(${PROJECT_NAME} PRIVATE ./../../../Algorithm  ./../../../Algorithm/Inference)
 
 ################################################################
 # 根据编译的debug与release自动生成对应的文件夹，以及将exe放入其中
 #target_compile_definitions(${PROJECT_NAME} PRIVATE EXECUTABLE_OUTPUT_PATH=${PROJECT_BINARY_DIR}/../)  
 #target_compile_definitions(${PROJECT_NAME} PRIVATE LIBRARY_OUTPUT_PATH=${PROJECT_BINARY_DIR}/../)
-SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/../)  
-SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/../)
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/)  
+SET(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/)
 install(TARGETS ${PROJECT_NAME}
 		CONFIGURATIONS Release 
         RUNTIME DESTINATION ${PROJECT_BINARY_DIR}/install/release
