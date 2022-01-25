@@ -9,9 +9,10 @@ namespace Algorithm
 			debug_ = false;
 		}
 
-		OPenCVInference::OPenCVInference(const InferenceParam& inference_param):inference_param_(inference_param)
+		OPenCVInference::OPenCVInference(const ModelParam& model_param)
 		{
-			debug_ = inference_param.debug_;
+
+			debug_ = model_param.debug_;
 		}
 
 #pragma endregion OPenCVInference

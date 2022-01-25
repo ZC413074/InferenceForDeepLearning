@@ -9,14 +9,16 @@ namespace Algorithm
 		class OPenCVInference
 		{
 		public:
+
 			OPenCVInference();
-			OPenCVInference(const InferenceParam& inference_param);
+
+			OPenCVInference(const ModelParam& model_param);
 
 			~OPenCVInference() {}
 
 		public:
 			bool           debug_;
-			InferenceParam inference_param_;
+			//ModelParam&    model_param_;
 		};
 	}
 }

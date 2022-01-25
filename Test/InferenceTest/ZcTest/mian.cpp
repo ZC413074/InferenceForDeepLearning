@@ -1,6 +1,6 @@
 #include<iostream>
 #include"test.h"
-#define COMMON_TEST 1
+#define COMMON_TEST 0
 int main()
 {
 
